@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Accordion Component</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        color: #343a40;
+        font-family: "Inter", sans-serif;
+        line-height: 1;
+      }
+      .accordion {
+        gap: 24px;
+        width: 700px;
+        display: flex;
+        margin: 100px auto;
+        flex-direction: column;
+      }
+
+      .accordion-items {
+        padding: 24px;
+        display: grid;
+        row-gap: 32px;
+        column-gap: 24px;
+        align-items: center;
+        grid-template-columns: auto 1fr auto;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+      }
+      /* .accordion-header {
+        padding: 16px;
+        display: flex;
+        border-radius: 4px;
+        align-items: center;
+        justify-content: space-around;
+        border-top: 4px solid #2dfcb4;
+      } */
+
+      .accordion-header-title,
+      .accordion-header-icon,
+      .accordion-header-number {
+        font-size: 24px;
+        font-weight: 600;
+        /* color: #087f5b; */
+      }
+      .accordion-header-number {
+        color: #ced4da;
+      }
+
+      .accordion-body {
+        grid-column: 2;
+        display: none;
+      }
+
+      .accordion-body ul {
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .accordion-body-text {
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+      .accordion-body-list {
+        color: #868e96;
+        margin-left: 16px;
+        margin-bottom: 20px;
+      }
+
+      .open {
+        border-top: 4px solid #2dfcb4;
+      }
+
+      .open .accordion-body {
+        display: block;
+      }
+
+      .open .accordion-header-title,
+      .open .accordion-header-number{
+        color: #087f5b;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <div class="accordion-items">
+        <p class="accordion-header-number">01</p>
+        <p class="accordion-header-title">Lorem ipsum dolor sit amet consecteturg.</p>
+        <i class="accordion-header-icon fa fa-chevron-down"></i>
+        <div class="accordion-body">
+          <p class="accordion-body-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt dignissimos maxime quas nihil!
+            Aliquam, fugiat impedit doloremque accusantium iure esse cumque beatae? Ipsa repudiandae enim
+            deleniti temporibus esse laudantium dolorem.
+          </p>
+          <ul class="accordion-body-list">
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-items open">
+        <p class="accordion-header-number">02</p>
+        <p class="accordion-header-title">Lorem ipsum dolor sit amet consecteturg.</p>
+        <i class="accordion-header-icon fa fa-chevron-down"></i>
+        <div class="accordion-body">
+          <p class="accordion-body-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt dignissimos maxime quas nihil!
+            Aliquam, fugiat impedit doloremque accusantium iure esse cumque beatae? Ipsa repudiandae enim
+            deleniti temporibus esse laudantium dolorem.
+          </p>
+          <ul class="accordion-body-list">
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-items">
+        <p class="accordion-header-number">03</p>
+        <p class="accordion-header-title">Lorem ipsum dolor sit amet consecteturg.</p>
+        <i class="accordion-header-icon fa fa-chevron-down"></i>
+        <div class="accordion-body">
+          <p class="accordion-body-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt dignissimos maxime quas nihil!
+            Aliquam, fugiat impedit doloremque accusantium iure esse cumque beatae? Ipsa repudiandae enim
+            deleniti temporibus esse laudantium dolorem.
+          </p>
+          <ul class="accordion-body-list">
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+            <li>Debitis itaque quidem voluptatibus reprehenderit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
